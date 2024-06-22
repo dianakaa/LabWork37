@@ -1,0 +1,33 @@
+﻿<Window x:Class="Task2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="SearchTextBox"/>
+        <DataGrid Grid.Row="1" x:Name="FilesDataGrid" AutoGenerateColumns="True"/>
+        <TextBlock Grid.Row="2" x:Name="RecordCountTextBlock"/>
+        <Button x:Name="ResetFilterButton" Grid.Row="4" 
+                Content="Сбросить фильтр"/>
+        <StackPanel Grid.Row="5">
+            <TextBox x:Name="FileSizeTextBox"/>
+            <RadioButton Content="Больше или равно" x:Name="GreaterOrEqualRadioButton" IsChecked="True"/>
+            <RadioButton Content="Меньше или равно" x:Name="LessOrEqualRadioButton"/>
+            <RadioButton Content="Все файлы" x:Name="AllFilesRadioButton"/>
+            <Button x:Name="SearchButton" Content="Поиск" Click="SearchButton_Click"/>
+        </StackPanel>
+    </Grid>
+    
+</Window>
